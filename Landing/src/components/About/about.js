@@ -25,7 +25,7 @@ class About extends Component {
                     <Container>
                         <SectionTitle
                             title="About Agency"
-                            subtitle="WHO WE ARE?"
+                            subtitle="WHO WE ARE?????"
                             desc="Porttitor dolor donec pulvinar tortor nisi quis dapibus tortor commodo sed Pellentesque hendrerit pellentesque libero nec sollicitudin."
                         />
 
