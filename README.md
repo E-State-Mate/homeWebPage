@@ -3,39 +3,74 @@ Home Web Page for E-StateMate solutions
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses [Yarn Package Manager](https://yarnpkg.com/). 
 
-## __Getting Started__ using [Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
+## __Getting Started__
 
-Start by cloning the `main/development` repository from github.
-<!-- I believe we will be using the development branch as the primary source to pull from, since that is where we are merging into? -->
+## Running Locally 
+This React App uses [Yarn](https://yarnpkg.com/) Package Manager. These instructions only cover Yarn versions prior to 2.0 (this app currently uses version 1.22.17).  
 
-### `git checkout -b new_branch_name`
-To make new updates, start by creating a new branch. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. <br/>
-Your new branch should be created while the `development` branch is selected. The `development` branch is where we will primarily be working off. *Notice that the origin site will reflect the new branch name.* <br/>
+1. Install Yarn. Yarn will download all required packages to run homeWebPage. 
 
-__To make updates to an existing branch:__<br />
-### `git pull origin branch_name`
-Use this command to fetch the most up-to-date code from the remote branch into your local to update all files.<br/>
+- It is recommended to install Yarn through the [npm manager manager](https://www.npmjs.com/), which comes bundled with [Node.js](https://nodejs.org/en/) when you install it on your system. Once you have npm installed, you can run the following to install and upgrade Yarn:
+
+```
+npm install -g yarn
+```
+
+- Check installation by running: 
+
+```
+yarn -v
+```
+
+2. In starting a new project, create or update a package.json file by running: 
+
+```
+yarn init -y
+```
+
+3. Run the app in development mode (http://localhost:3000).
+
+``` 
+yarn start
+```
 <br/>
 
-## Running React App Locally 
-This React App uses [Yarn](https://yarnpkg.com/) Package Manager.
+## Create/Pull a [Branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 
-### `npm install -g yarn`
-Installing Yarn will install all dependencies for the project. You can confirm the installation and check the version with `yarn -v`.
-<!-- I found that I could not use 'yarn' to install, as it said that the command was not found.  -->
+1. Start by cloning the `development` branch of the repository from github.
+<!-- I believe we will be using the development branch as the primary source to pull from, since that is where we are merging into? -->
 
-### `yarn start`
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br/><br/>
+2. To make new updates, start by creating a new branch. 
+
+- Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. 
+
+<!-- - A new branch should be created while the `development` branch is selected. The `development` branch is where we will primarily be working off.  -->
+*The origin site on your terminal will reflect the branch name once it is created.* 
+
+```
+git checkout -b new_branch_name
+```
+
+To make updates to an existing branch, run the following. This fetches the most up-to-date version from the remote branch into your local.
+
+```
+git pull origin branch_name
+```
+<br/>
 
 ## Pushing Code to the Remote Repository
-### `git push origin branch_name`
-After adding and commiting the updated code, be sure to push your work to *origin branch_name*. <br />
+After adding and commiting, push to the branch name that is being worked on. <br/>
 
-*__Do not push to the `main` or `development` branch, as it will override the `main/development` branch on the remote repository. New code needs to be reviewed first before merging into the `main/developement` branch. Otherwise, we may lose perfectly good existing code.__<br /><br />
+__Do not push to the `main` or `development` branch, as it will override the `main/development` branch on the remote repository. New code needs to be reviewed first before merging into the `developement` branch. Otherwise, we may lose perfectly good existing code.__
+
+```
+git push origin branch_name
+```
+
+<br />
 
 ## Deleting a Branch
-You can have head branches automatically deleted after pull requests are merged in your repository. To do so: 
+You can delete branches after pull requests are merged and reviewed in the remote repository on GitHub. To do so: 
  1. On GitHub, navigate to the main page of the repository. 
  2. Above the list of files, click *n* branches. 
  3. Scroll to the branch that you want to delete, then click 🗑. 
