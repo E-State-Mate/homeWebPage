@@ -13,9 +13,13 @@ import {
 import ModalSection from '../../components/common/ModalSection';
 
 //Import Images
-import bg1 from "../../assets/images/bg-1.jpg";
-import bg2 from "../../assets/images/bg-2.jpg";
-import bg3 from "../../assets/images/bg-3.jpg";
+// import bg1 from "../../assets/images/bg-1.jpg";
+// import bg2 from "../../assets/images/bg-2.jpg";
+// import bg3 from "../../assets/images/bg-3.jpg";
+
+let bg1 = "https://www.teahub.io/photos/full/270-2703621_wallpaper-city-buildings-aerial-view-bridges-chicago-building.jpg"
+let bg2 = "https://www.incimages.com/uploaded_files/image/1920x1080/getty_908748508_381147.jpg"
+let bg3 = "https://www.theladders.com/wp-content/uploads/handshake-deal-190820.jpg"
 
 
 class Section extends Component {
@@ -97,13 +101,15 @@ class Section extends Component {
                                             <Row className="justify-content-center">
                                                 <Col md="12">
                                                     <div className="home-content text-white">
-                                                        <div className="watch-video mt-5">
+                                                        {/* <div className="watch-video mt-5">
                                                             <Link onClick={this.callModal} to="#" className="video-play-icon-trigger text-white">
                                                                 <i className="mdi mdi-play play-icon-circle play play-icon f-30"></i>
                                                             </Link>
                                                         </div>
-                                                        <h5 className="sub-title mt-4 text-white pt-2 text-uppercase">Xeril Template</h5>
-                                                        <h1 className="title mt-4 text-white text-uppercase">We're Giving Design <br/> Solution & Idea.</h1>
+                                                        <h5 className="sub-title mt-4 text-white pt-2 text-uppercase">Xeril Template</h5> */}
+                                                        {/* Do we want uppercase? text-uppercase */}
+                                                        <h1 className="title mt-4 text-white ">Welcome to <br/> E-StateMate Services.</h1>
+            
                                                         <div className="pt-4 mt-1">
                                                             <Link to="#" className="btn btn-outline-white mt-2 mr-3">Get Started</Link>
                                                             <Link to="#" className="btn btn-primary mt-2">Purchase Now</Link>
@@ -116,14 +122,13 @@ class Section extends Component {
                                             <Row className="justify-content-center">
                                                 <Col md={12}>
                                                     <div className="home-content text-right">
-                                                        <div className="watch-video mt-5">
+                                                        {/* <div className="watch-video mt-5">
                                                             <Link to="#" onClick={this.callModal} className="video-play-icon-trigger text-white">
                                                                 <i className="mdi mdi-play play-icon-circle play play-icon f-30"></i>
                                                             </Link>
-                                                        </div>
-                                                        <h1 className="title mt-4 pt-3 text-white text-uppercase">Why Wait? Xeril<br/>Right Now!</h1>
-                                                        <p className="text-white mt-4 f-18">Vivamus sodales eleifend odio eget mollis Cras consectetur nisi quis pulvinar
-                                                            <br/> laoreet Nulla facilisi Maecenas eget velit laoreet.</p>
+                                                        </div> */}
+                                                        <h1 className="title mt-4 pt-3 text-white text-uppercase">Web applications <br/>for the real estate world</h1>
+                                                        <p className="text-white mt-4 f-18">Bring your platform into the 21st century</p>
                                                         <div className="pt-4 mt-1">
                                                             <Link to="#" className="btn btn-outline-white mt-2 mr-3">Get Started</Link>
                                                             <Link to="#" className="btn btn-primary mt-2">Purchase Now</Link>
@@ -136,14 +141,14 @@ class Section extends Component {
                                             <Row className="justify-content-center">
                                             <Col md={12}>
                                                 <div className="home-content text-center text-white">
-                                                    <div className="watch-video mt-5">
+                                                    {/* <div className="watch-video mt-5">
                                                         <Link to="#" onClick={this.callModal} className="video-play-icon-trigger text-white">
                                                             <i className="mdi mdi-play play-icon-circle play play-icon f-30"></i>
                                                         </Link>
-                                                    </div>
-                                                    <h1 className="title mt-4 text-white text-uppercase">We Are a Web Agency <br/> Focused On Quality</h1>
-                                                    <p className="text-white mt-4 f-18">Vivamus sodales eleifend odio eget mollis Cras consectetur nisi quis pulvinar
-                                                        <br/> laoreet Nulla facilisi Maecenas eget velit laoreet.</p>
+                                                    </div> */}
+                                                    <h1 className="title mt-4 text-white text-uppercase">Start building your website with us today.</h1>
+                                                    {/* <p className="text-white mt-4 f-18">Vivamus sodales eleifend odio eget mollis Cras consectetur nisi quis pulvinar
+                                                        <br/> laoreet Nulla facilisi Maecenas eget velit laoreet.</p> */}
                                                     <div className="pt-4 mt-1">
                                                         <Link to="#" className="btn btn-outline-white mt-2 mr-3">Get Started</Link>
                                                         <Link to="#" className="btn btn-primary mt-2">Purchase Now</Link>
