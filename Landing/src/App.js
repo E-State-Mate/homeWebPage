@@ -1,11 +1,16 @@
 import React, { Component } from "react";
-import routes from "./routes";
 import {
   withRouter,
-  Route,
   Switch,
   BrowserRouter as Router
 } from "react-router-dom";
+import Index2 from './pages/Index2/Index2'
+
+// Temporarily removed Route objects so it loads right to page.
+// import routes from "./routes";
+// import { Route } from 'react-router-dom'
+
+
 
 // Import Scss
 import "./theme.scss";
@@ -23,9 +28,11 @@ class App extends Component {
           <React.Fragment>
           <Router>
             <Switch>
-              {routes.map((route, idx) => (
+              {/* See Route Comment above. */}
+              {/* {routes.map((route, idx) => (
                 <Route path={route.path} component={route.component} key={idx} />
-              ))}
+              ))} */}
+              <Index2 />
             </Switch>
           </Router>
         </React.Fragment>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Form, Button } from "reactstrap";
 import { Link } from "react-router-dom";
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 
 //Importing Modal
 import ModalSection from '../../components/common/ModalSection';
