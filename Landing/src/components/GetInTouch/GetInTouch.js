@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { Container, Row, Col, Media, FormGroup } from "reactstrap";
 import { AvForm, AvField } from "availity-reactstrap-validation";
 
@@ -14,11 +14,15 @@ function GetInTouch() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState,
+    watch,
+    // formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
-  console.log(errors);
 
+  useEffect(() => {
+    console.log(watch());
+  }, [formState]);
   return (
     <>
       <section className="section" id="contact">
@@ -238,19 +242,6 @@ function GetInTouch() {
                     <option value="Dr">Dr</option>
                   </select>
 
-                  {/* <input
-                    {...register("Developer", { required: true })}
-                    type="radio"
-                    value="Yes"
-                    className="form-control mt-3"
-                  />
-                  <input
-                    {...register("Developer", { required: true })}
-                    type="radio"
-                    value="No"
-                    className="form-control mt-3"
-                  /> */}
-
                   <input
                     type="text"
                     placeholder="Name of business (optional)"
@@ -273,14 +264,17 @@ function GetInTouch() {
                     <option value="Sales">Sales</option>
                     <option value="Other">Other</option>
                   </select>
-                  <input
-                    type="text"
-                    placeholder="If other, please list (optional)"
-                    className="form-control mt-3"
-                    {...register("Website goal: other", {
-                      maxLength: 100,
-                    })}
-                  />
+
+                  {watch()["Website goal"] === "Other" && (
+                    <input
+                      type="text"
+                      placeholder="If other, please list (optional)"
+                      className="form-control mt-3"
+                      {...register("Website goal: other", {
+                        maxLength: 100,
+                      })}
+                    />
+                  )}
 
                   <p>What type of business are you developing your site for?</p>
                   <select
@@ -291,34 +285,43 @@ function GetInTouch() {
                     <option value="Personal">Personal</option>
                     <option value="Other">Other</option>
                   </select>
-                  <input
-                    type="text"
-                    placeholder="What type of business is your website for? (if other)"
-                    className="form-control mt-3"
-                    {...register("Website goal: other", {
-                      maxLength: 100,
-                    })}
-                  />
-                  <p>
-                    Would you like a portfolio for displaying your properties?
-                    (if Real Estate)
-                  </p>
-                  <p>Yes</p>
-                  <input
-                    {...register("Property displaying portfolio", {
-                      required: true,
-                    })}
-                    type="radio"
-                    value="Yes"
-                  />
-                  <p>No</p>
-                  <input
-                    {...register("Property displaying portfolio", {
-                      required: true,
-                    })}
-                    type="radio"
-                    value="No"
-                  />
+
+                  {watch()["Business type"] === "Other" && (
+                    <input
+                      type="text"
+                      placeholder="What type of business is your website for? (if other)"
+                      className="form-control mt-3"
+                      {...register("Business type: other", {
+                        maxLength: 100,
+                      })}
+                    />
+                  )}
+                  {watch()["Business type"] === "Real Estate" && (
+                    <>
+                      <p>
+                        Would you like a portfolio for displaying your
+                        properties? (if Real Estate)
+                      </p>
+                      <div style={{ display: "flex" }}>
+                        <p>Yes</p>
+                        <input
+                          {...register("Property displaying portfolio", {
+                            required: true,
+                          })}
+                          type="radio"
+                          value="Yes"
+                        />
+                        <p>No</p>
+                        <input
+                          {...register("Property displaying portfolio", {
+                            required: true,
+                          })}
+                          type="radio"
+                          value="No"
+                        />
+                      </div>
+                    </>
+                  )}
 
                   <p>I'm looking for a website that is...</p>
 
@@ -333,23 +336,24 @@ function GetInTouch() {
                   <p>
                     Would you like your website to also be formatted for mobile?
                   </p>
-
-                  <p>Yes</p>
-                  <input
-                    {...register("Mobile website", {
-                      required: true,
-                    })}
-                    type="radio"
-                    value="Yes"
-                  />
-                  <p>No</p>
-                  <input
-                    {...register("Mobile website", {
-                      required: true,
-                    })}
-                    type="radio"
-                    value="No"
-                  />
+                  <div style={{ display: "flex" }}>
+                    <p>Yes</p>
+                    <input
+                      {...register("Mobile website", {
+                        required: true,
+                      })}
+                      type="radio"
+                      value="Yes"
+                    />
+                    <p>No</p>
+                    <input
+                      {...register("Mobile website", {
+                        required: true,
+                      })}
+                      type="radio"
+                      value="No"
+                    />
+                  </div>
 
                   <p>The websites I'd most like to emulate are...</p>
                   <input
@@ -379,70 +383,82 @@ function GetInTouch() {
 
                   <p>Some sections I'd like my website to have are...</p>
                   <p>NavBar</p>
-                  <p>Yes</p>
-                  <input
-                    {...register("Website section: Navbar")}
-                    type="radio"
-                    value="Yes"
-                  />
-                  <p>No</p>
-                  <input
-                    {...register("Website section: Navbar")}
-                    type="radio"
-                    value="No"
-                  />
+
+                  <div style={{ display: "flex" }}>
+                    <p>Yes</p>
+                    <input
+                      {...register("Website section: Navbar")}
+                      type="radio"
+                      value="Yes"
+                    />
+                    <p>No</p>
+                    <input
+                      {...register("Website section: Navbar")}
+                      type="radio"
+                      value="No"
+                    />
+                  </div>
                   <p>Button Links</p>
-                  <p>Yes</p>
-                  <input
-                    {...register("Website section: Button links")}
-                    type="radio"
-                    value="Yes"
-                  />
-                  <p>No</p>
-                  <input
-                    {...register("Website section: Button links")}
-                    type="radio"
-                    value="No"
-                  />
+                  <div style={{ display: "flex" }}>
+                    <p>Yes</p>
+                    <input
+                      {...register("Website section: Button links")}
+                      type="radio"
+                      value="Yes"
+                    />
+                    <p>No</p>
+                    <input
+                      {...register("Website section: Button links")}
+                      type="radio"
+                      value="No"
+                    />
+                  </div>
                   <p>Picture Slides</p>
-                  <p>Yes</p>
-                  <input
-                    {...register("Website section: Picture slides")}
-                    type="radio"
-                    value="Yes"
-                  />
-                  <p>No</p>
-                  <input
-                    {...register("Website section: Picture slides")}
-                    type="radio"
-                    value="No"
-                  />
+                  <div style={{ display: "flex" }}>
+                    <p>Yes</p>
+                    <input
+                      {...register("Website section: Picture slides")}
+                      type="radio"
+                      value="Yes"
+                    />
+                    <p>No</p>
+                    <input
+                      {...register("Website section: Picture slides")}
+                      type="radio"
+                      value="No"
+                    />
+                  </div>
                   <p>Modal (Popup Window)</p>
-                  <p>Yes</p>
-                  <input
-                    {...register("Website section: Modal (Popup window)")}
-                    type="radio"
-                    value="Yes"
-                  />
-                  <p>No</p>
-                  <input
-                    {...register("Website section: Modal (Popup window)")}
-                    type="radio"
-                    value="No"
-                  />
+                  <div style={{ display: "flex" }}>
+                    <p>Yes</p>
+                    <input
+                      {...register("Website section: Modal (Popup window)")}
+                      type="radio"
+                      value="Yes"
+                    />
+                    <p>No</p>
+                    <input
+                      {...register("Website section: Modal (Popup window)")}
+                      type="radio"
+                      value="No"
+                    />
+                  </div>
                   <p>Dropdown Menu</p>
-                  <p>Yes</p>
-                  <input
-                    {...register("Website section: Dropdown menu")}
-                    type="radio"
-                    value="Yes"
-                  />
-                  <p>No</p>
-                  <input
-                    {...register("Website section: Dropdown menu")}
-                    type="radio"
-                    value="No"
-                  />
+                  <div style={{ display: "flex" }}>
+                    <p>Yes</p>
+                    <input
+                      {...register("Website section: Dropdown menu")}
+                      type="radio"
+                      value="Yes"
+                    />
+                    <p>No</p>
+                    <input
+                      {...register("Website section: Dropdown menu")}
+                      type="radio"
+                      value="No"
+                    />
+                  </div>
+
                   <p>Other</p>
                   <input
                     type="text"
@@ -454,38 +470,127 @@ function GetInTouch() {
                   />
 
                   <p>Is there anything else you'd like us to know?</p>
-                  <p>Yes</p>
-                  <input
-                    {...register("Additional info", {
-                      required: true,
-                    })}
-                    type="radio"
-                    value="Yes"
-                  />
-                  <p>No</p>
-                  <input
-                    {...register("Additional info", {
-                      required: true,
-                    })}
-                    type="radio"
-                    value="No"
-                  />
-                  {/* <input
-                    type="text"
-                    placeholder="Additional information (if yes)"
-                    className="form-control mt-3"
-                    {...register("Additional info: content", {
-                      maxLength: 100,
-                    })}
-                  /> */}
+                  <div style={{ display: "flex" }}>
+                    <p>Yes</p>
+                    <input
+                      {...register("Additional info", {
+                        required: true,
+                      })}
+                      type="radio"
+                      value="Yes"
+                    />
+                    <p>No</p>
+                    <input
+                      {...register("Additional info", {
+                        required: true,
+                      })}
+                      type="radio"
+                      value="No"
+                    />
+                  </div>
+                  {watch()["Additional info"] === "Yes" && (
+                    <textarea
+                      placeholder="Additional information (if yes)"
+                      className="form-control mt-3"
+                      {...register("Additional info: content", {
+                        required: true,
+                      })}
+                    />
+                  )}
+                  <p>Provided URLs:</p>
+                  <p>{watch()["Emulated website 1"]}</p>
+                  <p>{watch()["Emulated website 2"]}</p>
+                  <p>{watch()["Emulated website 3"]}</p>
+                  <p>
+                    <b>I understand that the</b> <u>minimum</u> cost for our web
+                    dev team is $<u>6,000</u> and can cost more with added
+                    features.
+                  </p>
+                  <div style={{ display: "flex" }}>
+                    <p>Yes</p>
+                    <input
+                      {...register("Price understanding", {
+                        required: true,
+                      })}
+                      type="radio"
+                      value="Yes"
+                    />
+                    <p>No</p>
+                    <input
+                      {...register("Price understanding", {
+                        required: true,
+                      })}
+                      type="radio"
+                      value="No"
+                    />
+                  </div>
 
-                  <textarea
-                    placeholder="Additional information (if yes)"
-                    className="form-control mt-3"
-                    {...register("Additional info: content", {
-                      required: true,
-                    })}
-                  />
+                  {watch()["Price understanding"] === "No" && (
+                    <p>
+                      No worries. We'll keep your information on hand in case
+                      you change your mind.
+                    </p>
+                  )}
+
+                  {watch()["Price understanding"] === "Yes" && (
+                    <>
+                      <p>
+                        Excellent. Pick three days that can work for a video
+                        consultation.
+                      </p>
+                      <input
+                        type="datetime-local"
+                        className="form-control mt-3"
+                        placeholder="datetime-local"
+                        {...register("datetime-local 1")}
+                      />
+                      <input
+                        type="datetime-local"
+                        className="form-control mt-3"
+                        placeholder="datetime-local"
+                        {...register("datetime-local 2")}
+                      />
+                      <input
+                        type="datetime-local"
+                        className="form-control mt-3"
+                        placeholder="datetime-local"
+                        {...register("datetime-local 3")}
+                      />
+
+                      <p>In summary:</p>
+                      <p>
+                        Name: {watch()["Title"]} {watch()["First name"]}{" "}
+                        {watch()["Last name"]}
+                      </p>
+                      <p>Phone number: {watch()["Mobile number"]}</p>
+                      <p>Email: {watch()["Email"]}</p>
+                      <p>Name of Business: {watch()["Name of business"]}</p>
+                      <p>Type of Project: {watch()["Website goal"]}</p>
+                      <p>Page type: {watch()["Website type"]}</p>
+                      <p>Web inspirations URLs:</p>
+                      <p>{watch()["Emulated website 1"]}</p>
+                      <p>{watch()["Emulated website 2"]}</p>
+                      <p>{watch()["Emulated website 3"]}</p>
+                      <p>Website sections: </p>
+                      <p>
+                        Button links: {watch()["Website section: Button links"]}
+                      </p>
+                      <p>
+                        Dropdown menu:{" "}
+                        {watch()["Website section: Dropdown menu"]}
+                      </p>
+                      <p>
+                        Modal (Popup window):{" "}
+                        {watch()["Website section: Modal (Popup window)"]}
+                      </p>
+                      <p>Navbar: {watch()["Website section: Navbar"]}</p>
+                      <p>
+                        Picture slides:{" "}
+                        {watch()["Website section: Picture slides"]}
+                      </p>
+                      <p>other: {watch()["Website section: Other"]}</p>
+                    </>
+                  )}
 
                   <input
                     type="submit"
