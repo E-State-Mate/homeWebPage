@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 
 const NavbarPage = React.lazy(() => import('../../components/Navbar/Navbar_Page'));
 const Section = React.lazy(() => import('./section'));
@@ -15,11 +15,9 @@ const Cta = React.lazy(() => import('../../components/Cta/Cta'));
 const GetInTouch = React.lazy(() => import('../../components/GetInTouch/GetInTouch'));
 
 
-class Index2 extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            navItems : [
+function Index2 (props) {
+    
+   const [navItems, setNavItems] = useState([
                 { id: 1 , idnm : "home", navheading: "Home" },
                 { id: 2 , idnm : "about", navheading: "About" },
                 { id: 3 , idnm : "portfolio", navheading: "Portfolio" },
@@ -28,34 +26,39 @@ class Index2 extends Component {
                 { id: 6 , idnm : "pricing", navheading: "Pricing" },
                 { id: 7 , idnm : "blog", navheading: "Blog" },
                 { id: 8 , idnm : "contact", navheading: "Contact" },
-            ],
-            pos : document.documentElement.scrollTop,
-            imglight : true,
-            navClass : ""
-        };
-    }
+            ])
+    const [pos, setPos] = useState(document.documentElement.scrollTop)
+    
+    const [imglight, setImglight] = useState(true)
+    const [navClass, setNavClass] = useState("")
 
-    componentDidMount() {
-        window.addEventListener("scroll", this.scrollNavigation, true);
-    }
+    useEffect(() => window.addEventListener("scroll", scrollNavigation, true), [])
+    
+    // componentDidMount() {
+        
+    // }
 
-    componentWillUnmount(){
-        window.removeEventListener("scroll", this.scrollNavigation, true);
-    }
+    //We'll figure this one later, our webpage is only 1 page
+    // componentWillUnmount() {
+    //     window.removeEventListener("scroll", scrollNavigation, true);
+    // }
 
-    scrollNavigation = () => {
+    const scrollNavigation = () => {
         var scrollup=document.documentElement.scrollTop;
-        if(scrollup > this.state.pos)
+        if(scrollup > pos)
         {
-            this.setState({navClass : "nav-sticky", imglight : false});
+            setNavClass("nav-sticky")
+            setImglight(false);
         }
         else
         {
-            this.setState({navClass : "", imglight : true});
+            setNavClass("")
+            setImglight(true);
+            
         }
     };
 
-    Loader = () => {
+    const Loader = () => {
         return (
             <div id="preloader">
                 <div id="status">
@@ -65,13 +68,13 @@ class Index2 extends Component {
         );
     }
 
-    render() {
+    
         return (
             <React.Fragment>
-                <Suspense fallback = {this.Loader()} >
+                <Suspense fallback = {Loader()} >
 
                     {/* Importing Navbar */}
-                    <NavbarPage navItems={this.state.navItems} navClass={this.state.navClass} imglight={this.state.imglight} />
+                    <NavbarPage navItems={navItems} navClass={navClass} imglight={imglight} />
 
                     {/* Importing section */}
                     <Section/>
@@ -112,7 +115,7 @@ class Index2 extends Component {
 
             </React.Fragment>
         );
-    }
+    
 }
 
 export default Index2;
