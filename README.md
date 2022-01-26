@@ -38,13 +38,12 @@ yarn start
 ## Create/Pull a [Branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 
 1. Start by cloning the `development` branch of the repository from github.
-<!-- I believe we will be using the development branch as the primary source to pull from, since that is where we are merging into? -->
 
 2. To make new updates, start by creating a new branch. 
 
 - Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. 
 
-<!-- - A new branch should be created while the `development` branch is selected. The `development` branch is where we will primarily be working off.  -->
+- A new branch should be created while the `development` branch is selected. The `development` branch is where we will primarily be working off. 
 *The origin site on your terminal will reflect the branch name once it is created.* 
 
 ```
