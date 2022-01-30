@@ -12,7 +12,7 @@ const Footer = React.lazy(() => import('../../components/Footer/footer'));
 // const Testimonials = React.lazy(() => import('../../components/Testimonials/testimonials'));
 // const Pricing = React.lazy(() => import('../../components/Pricing/pricing'));
 // const Blog = React.lazy(() => import('../../components/Blog/blog'));
-const Cta = React.lazy(() => import('../../components/Cta/Cta'));
+const CTA = React.lazy(() => import('../../components/CTA/CTA'));
 const GetInTouch = React.lazy(() => import('../../components/GetInTouch/GetInTouch'));
 
 
@@ -104,7 +104,7 @@ class Index2 extends Component {
                     {/* <Blog/> */}
 
                     {/* Importing cta */}
-                    <Cta/>
+                    <CTA/>
 
                     {/* Importing get in touch */}
                     <GetInTouch/>

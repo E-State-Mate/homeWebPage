@@ -1,6 +1,4 @@
 import React from 'react';
-// Converted to function component, no longer needed
-// import { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Media, Form, Button } from "reactstrap";
 
@@ -30,15 +28,17 @@ const state = {
 }
 
 const Footer = () => {
+
     return(
         <React.Fragment>
             <footer className="bg-footer">
                 <Container>
-                    <div className="footer-subscribe py-5">
+                    {/* Will add email subscriber bit to this page later */}
+                    {/* <div className="footer-subscribe py-5">
                         <Row>
                             <Col lg={8}>
                                 <div className="mt-3">
-                                    <h5 className="text-white mt-2 pt-1">Be in the know with the letest and greatest from <span className="text-primary text-uppercase">Xeril</span></h5>
+                                    <h5 className="text-white mt-2 pt-1">Be in the know with the letest and greatest from <span className="text-primary text-uppercase">E-State Mate Services</span></h5>
                                 </div>
                             </Col>
                             <Col lg={4}>
@@ -50,14 +50,14 @@ const Footer = () => {
                                 </div>
                             </Col>
                         </Row>
-                    </div>
+                    </div> */}
 
                     <Row className="py-5">
                         <Col lg={3}>
                             <div className="mt-2">
-                                <h6 className="text-white text-uppercase f-16">Xeril</h6>
-                                <p className="text-white-50 mt-3 pt-2 mb-0 ">Semper nibh a dignissim Integer cursus tempsed quis justo molis starm the consectetur.</p>
-                                <div className="mt-4">
+                                <h6 className="text-primary text-uppercase f-16">EStateMateServices</h6>
+                                <p className="text-white-50 mt-3 pt-2 mb-0 ">Follow us on our socials for future product updates, testimonials, and exciting offers!</p>
+                                <div>
                                     <ul className="list-inline footer-social mb-0">
                                         {
                                             state.socials.map((social, key) =>
@@ -91,7 +91,7 @@ const Footer = () => {
                         </Col> */}
 
                         <Col lg={4}>
-                            <div className="mt-4">
+                            <div>
                                 <h6 className="text-white text-uppercase f-16">Latest news</h6>
                                 <div className="mt-3 mb-0">
                                     <div className="">
