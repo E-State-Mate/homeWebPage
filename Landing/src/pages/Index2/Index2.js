@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from 'react';
+import React, { Component, Suspense, useState, useEffect } from 'react';
 
 // Commented out unneeded components
 const NavbarPage = React.lazy(() => import('../../components/Navbar/Navbar_Page'));
@@ -15,50 +15,46 @@ const Footer = React.lazy(() => import('../../components/Footer/footer'));
 const CTA = React.lazy(() => import('../../components/CTA/CTA'));
 const GetInTouch = React.lazy(() => import('../../components/GetInTouch/GetInTouch'));
 
+const navItems = [
+    { id: 1 , idnm : "home", navheading: "Home" },
+    { id: 2 , idnm : "about", navheading: "About" },
+    // { id: 3 , idnm : "portfolio", navheading: "Portfolio" },
+    { id: 4 , idnm : "team", navheading: "Team" },
+    // { id: 5 , idnm : "testimonial", navheading: "Testimonial" },
+    // { id: 6 , idnm : "pricing", navheading: "Pricing" },
+    // { id: 7 , idnm : "blog", navheading: "Blog" },
+    { id: 8 , idnm : "contact", navheading: "Contact" }, 
+    // *** Need to add a link for "Get a Quote Now"
+]
 
-class Index2 extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            navItems : [
-                { id: 1 , idnm : "home", navheading: "Home" },
-                { id: 2 , idnm : "about", navheading: "About" },
-                // { id: 3 , idnm : "portfolio", navheading: "Portfolio" },
-                { id: 4 , idnm : "team", navheading: "Team" },
-                // { id: 5 , idnm : "testimonial", navheading: "Testimonial" },
-                // { id: 6 , idnm : "pricing", navheading: "Pricing" },
-                // { id: 7 , idnm : "blog", navheading: "Blog" },
-                { id: 8 , idnm : "contact", navheading: "Contact" },
-                
-                // *** Need to add a link for "Get a Quote Now"
-            ],
-            pos : document.documentElement.scrollTop,
-            imglight : true,
-            navClass : ""
-        };
-    }
+const Index2 = () => {
 
-    componentDidMount() {
-        window.addEventListener("scroll", this.scrollNavigation, true);
-    }
+    const [imglight, setImglight] = useState(true);
+    const [navClass, setNavClass] = useState("");
+    const [pos, setPos] = useState(document.documentElement.scrollTop);
 
-    componentWillUnmount(){
-        window.removeEventListener("scroll", this.scrollNavigation, true);
-    }
+    useEffect(() => {
+        window.addEventListener("scroll", scrollNavigation, true);
+    }, [])
 
-    scrollNavigation = () => {
-        var scrollup=document.documentElement.scrollTop;
-        if(scrollup > this.state.pos)
-        {
-            this.setState({navClass : "nav-sticky", imglight : false});
+    useEffect(() => {
+        return () => {
+            window.removeEventListener("scroll", this.scrollNavigation, true);
         }
-        else
-        {
-            this.setState({navClass : "", imglight : true});
-        }
-    };
+      }, []);
 
-    Loader = () => {
+    const scrollNavigation = () => {
+        const scrollUp = document.documentElement.scrollTop;
+        if(scrollUp > pos){
+            setNavClass('nav-sticky');
+            setImglight(false);
+        } else {
+            setNavClass('');
+            setImglight(true);
+        }
+    }
+
+    const Loader = () => {
         return (
             <div id="preloader">
                 <div id="status">
@@ -68,54 +64,25 @@ class Index2 extends Component {
         );
     }
 
-    render() {
-        return (
-            <React.Fragment>
-                <Suspense fallback = {this.Loader()} >
-
-                    {/* Importing Navbar */}
-                    <NavbarPage navItems={this.state.navItems} navClass={this.state.navClass} imglight={this.state.imglight} />
-
-                    {/* Importing section */}
-                    <Section/>
-
-                    {/* Importing about us */}
-                    <About/>
-
-                    {/* Importing process */}
-                    <Process/>
-
-                    {/* Importing portfolio */}
-                    {/* <Portfolio/> */}
-
-                    {/* Importing counter */}
-                    {/* <Counter/> */}
-
-                    {/* Importing team */}
-                    <OurTeam/>
-
-                    {/* Importing testimonials */}
-                    {/* <Testimonials/> */}
-
-                    {/* Importing pricing */}
-                    {/* <Pricing/> */}
-
-                    {/* Importing blog */}
-                    {/* <Blog/> */}
-
-                    {/* Importing cta */}
-                    <CTA/>
-
-                    {/* Importing get in touch */}
-                    <GetInTouch/>
-                    
-                    {/* Importing footer */}
-                    <Footer/>
-                </Suspense>
-
-            </React.Fragment>
-        );
-    }
+    return(
+        <React.Fragment>
+            <Suspense fallback = {Loader()} >
+                <NavbarPage navItems={navItems} navClass={navClass} imglight={imglight} />
+                <Section/>
+                <About/>
+                <Process/>
+                {/* <Portfolio/> */}
+                {/* <Counter/> */}
+                <OurTeam/>
+                {/* <Testimonials/> */}
+                {/* <Pricing/> */}
+                {/* <Blog/> */}
+                <CTA/>
+                <GetInTouch/>
+                <Footer/>
+            </Suspense>
+        </React.Fragment>
+    )
 }
 
 export default Index2;
