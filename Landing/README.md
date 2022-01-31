@@ -2,7 +2,7 @@
 
 Developed by the E-State Mate Services development team. 
 
-In the project directory, you can run:
+### Operation instructions
 
 In the project directory, you can run: "npm i" then "npm start" in the CLI. That should be it!
 
