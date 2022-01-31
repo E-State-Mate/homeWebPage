@@ -8,7 +8,7 @@ class ProcessBox extends Component {
                 {
                     this.props.processes.map((process, key) =>
                             <Col key={key} lg={3} className={ process.id !== "04" ? "progress-border" : ""}>
-                                <div className="text-center">
+                                <div className="text-center">d
                                     <div className="progress-count text-white mt-4">
                                         <h3>{process.id}</h3>
                                     </div>

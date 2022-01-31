@@ -11,7 +11,7 @@ class About extends Component {
         super(props);
         this.state = {
             data : [
-                { icon : "mdi mdi-monitor", title : "Test Title 2, desc : "Hello world" },
+                { icon : "mdi mdi-monitor", title : "Test Title 2", desc : "Hello world" },
                 { icon : "mdi mdi-nfc-variant", title : "Development", desc : "Aliquam tempor an tidunt liberonon feugiat quam risu tortor.", isLight : true },
                 { icon : "mdi mdi-lightbulb-on-outline", title : "Branding", desc : "Aliquam tempor an tidunt liberonon feugiat quam risu tortor.-" },
             ]
