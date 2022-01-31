@@ -4,7 +4,7 @@ import React,  { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 import '../../../node_modules/react-modal-video/scss/modal-video.scss';
 
-function ModalSection() {
+function ModalSection(props) {
     const [isOpen, setIsOpen] = useState(false)
     // constructor(props) {
     //     super(props);
@@ -22,7 +22,7 @@ function ModalSection() {
 
     return (
         <React.Fragment>
-            <ModalVideo channel={this.props.channel} isOpen={this.state.isOpen} videoId={this.props.videoId} onClose={() => this.setState({isOpen: false})} />
+            <ModalVideo channel={channel} isOpen={isOpen} videoId={videoId} onClose={() => {setIsOpen(false)}} />
         </React.Fragment>
     );
     

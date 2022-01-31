@@ -6,7 +6,7 @@ import { useState } from 'react';
 //Importing Modal
 import ModalSection from '../../components/common/ModalSection';
 
-function Section() {
+function Section(props) {
     const [isOpen, setIsOpen]= useState(false)
     
     // constructor() {
@@ -18,7 +18,7 @@ function Section() {
     // }
 
     const callModal = () => {
-        this.refs.child.openModal(); // TODO: figure out how to change to function 
+        this.refs.child.openModal(); // TODO: figure out correct syntax to connect to openModal() in functional component form. 
     }
     
     
