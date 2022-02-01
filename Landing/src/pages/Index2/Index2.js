@@ -13,7 +13,7 @@ const Footer = React.lazy(() => import('../../components/Footer/footer'));
 // const Testimonials = React.lazy(() => import('../../components/Testimonials/testimonials'));
 // const Pricing = React.lazy(() => import('../../components/Pricing/pricing'));
 // const Blog = React.lazy(() => import('../../components/Blog/blog'));
-const CTA = React.lazy(() => import('../../components/CTA/CTA'));
+const CallToAction = React.lazy(() => import('../../components/CallToAction/CallToAction'));
 const GetInTouch = React.lazy(() => import('../../components/GetInTouch/GetInTouch'));
 
 const navItems = [
@@ -78,7 +78,7 @@ const Index2 = () => {
                 {/* <Testimonials/> */}
                 {/* <Pricing/> */}
                 {/* <Blog/> */}
-                <CTA/>
+                <CallToAction/>
                 <GetInTouch/>
                 <Footer/>
             </Suspense>
