@@ -10,7 +10,7 @@ const CTA = () => {
                 <Container>
                     <Row>
                         <Col lg={12}>
-                            <div className="text-cebter">
+                            <div className="text-center">
                                 <h2 className="text-white text-center">Work with EStateMate today</h2>
                                 <p className=" text-white text-center mt-3">Share with our team your tech needs and let's get started!</p>
                                 <div className="text-center mt-4">
