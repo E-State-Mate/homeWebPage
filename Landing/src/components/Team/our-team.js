@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { Container, Row } from "reactstrap";
 
 //Import Components
@@ -8,11 +8,12 @@ import SectionTitle from "../../components/common/section-title";
 import TeamBox from "./team-box";
 
 //Import Images
-import team1 from "../../assets/images/users/img-1.jpg";
-import team2 from "../../assets/images/users/img-2.jpg";
-import team3 from "../../assets/images/users/img-3.jpg";
-import team4 from "../../assets/images/users/img-4.jpg";
-
+import team1 from "../../assets/images/users/EddieWidemanHeadshot.jpg";
+import team2 from "../../assets/images/users/zach.png";
+import team3 from "../../assets/images/users/LarryHovellHeadshot2.png";
+import team4 from "../../assets/images/users/sylvia.jpg";
+import team5 from "../../assets/images/users/kalju.png";
+import team6 from "../../assets/images/users/paola.jpg";
 function OurTeam () {
     const [members, setMembers] = useState([
         { 
@@ -25,7 +26,7 @@ function OurTeam () {
             img : team2, 
             name : "Zach Zippit", 
             post : "Lead Project Manager", 
-            desc : "Zach Tippit is an experienced engineer, business consultant and team leader with a passion for scalable solutions in the tech world.  Zach determines the weekly project goals and manages the fullstack team at E-StateMate. When he's not writing content for his site, he is designing metropoles in Cities: Skylines" 
+            desc : "Zach Tippit is an experienced engineer, business consultant and team leader with a passion for scalable solutions in the tech world.  Zach determines the weekly project goals and manages the fullstack team at E-StateMate. When he's not hammering out code or hopping on an airplane, he is designing metropoles in Cities: Skylines." 
         },
         { 
             img : team3, 
@@ -37,7 +38,19 @@ function OurTeam () {
             img : team4, 
             name : "Sylvia Jung", 
             post : "Lead FrontEnd Developer", 
-            desc : "Consequat conllis Vebulum ante ipsum primis faubus orci cubilia Curae." 
+            desc : "Sylvia Jung is a MERN stack developer with an extensive background in management and guest relations. She recently relocated to Miami to work in Web Development. Currently, she is supporting E-StateMate as Front-End Developer. During her down time, you can find Sylvia telling and laughing at her own dad jokes." 
+        },
+        { 
+            img : team5, 
+            name : "Kalju Nekvasil", 
+            post : "Full Stack Developer", 
+            desc : "Kalju Nekvasil is a full stack developer who builds and maintains MERN applications for clients. When he is not writing code for E-StateMate he can be found wrestling wildebeests in the Serengeti or hunting for lost treasure in the Amazon. " 
+        },
+        { 
+            img : team6, 
+            name : "Paola Garcia", 
+            post : "Full Stack Developer", 
+            desc : "Paola Garcia is a MERN stack developer, consultant, and avid learner. Curiosity and determination has led her to touch a variety of industries and professional roles. Currently she is supporting E-StateMate to become a fully scalable solution for the real estate industry." 
         },
     ])
 
@@ -46,7 +59,7 @@ function OurTeam () {
                 <section className="section" id="team">
                     <Container>
                     <SectionTitle
-                        title="Our Teams"
+                        title="Our Team"
                         subtitle="Minds"
                         desc="Get to know our staff of tech profesionals"
                     />
