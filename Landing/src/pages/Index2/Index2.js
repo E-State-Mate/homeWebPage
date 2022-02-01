@@ -52,6 +52,8 @@ const Index2 = () => {
         } else {
             setNavClass('');
             setImglight(true);
+        }
+    }
 
     const Loader = () => {
         return (
