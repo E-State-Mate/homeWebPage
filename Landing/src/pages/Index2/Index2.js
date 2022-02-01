@@ -1,4 +1,5 @@
-import React, { Component, Suspense, useState, useEffect } from 'react';
+
+import React, { Suspense, useState, useEffect } from 'react';
 
 // Commented out unneeded components
 const NavbarPage = React.lazy(() => import('../../components/Navbar/Navbar_Page'));
@@ -51,8 +52,6 @@ const Index2 = () => {
         } else {
             setNavClass('');
             setImglight(true);
-        }
-    }
 
     const Loader = () => {
         return (
@@ -63,7 +62,7 @@ const Index2 = () => {
             </div>
         );
     }
-
+    
     return(
         <React.Fragment>
             <Suspense fallback = {Loader()} >
