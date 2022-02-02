@@ -33,7 +33,7 @@ function Section(props) {
                             <Col md={12}>
                                 <div className="home-content text-white">
                                     <div className="watch-video mt-5">
-                                    <Link onClick={this.callModal} to="#" className="video-play-icon-trigger text-white">
+                                    <Link onClick={callModal} to="#" className="video-play-icon-trigger text-white">
                                             <i className="mdi mdi-play play-icon-circle play play-icon f-30"></i>
                                         </Link>
                                     </div>
