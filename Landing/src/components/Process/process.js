@@ -9,7 +9,7 @@ const Process = () => {
     const [processes, setProcesses] = useState([
                 { 
                     id : "01", 
-                    title : "SiteMapping", 
+                    title : "Site Mapping", 
                     desc : "Our firm will walk you through the site architecture process." 
                 },
                 { 
