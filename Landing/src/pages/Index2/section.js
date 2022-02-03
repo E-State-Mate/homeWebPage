@@ -32,13 +32,16 @@ const Section = () => {
                         <Row className="justify-content-center">
                             <Col md={12}>
                                 <div className="home-content text-white">
-                                    {/* <div className="watch-video mt-5"> */}
+                                    <div className="watch-video mt-5">
                                     {/* <Link onClick={callModal} to="#" className="video-play-icon-trigger text-white">
                                             <i className="mdi mdi-play play-icon-circle play play-icon f-30"></i>
                                         </Link> */}
-                                    {/* </div> */}
-                                    <h5 className="sub-title mt-4 text-white pt-2 text-uppercase">E-StateMates Services LLC</h5>
-                                    <h1 className="title mt-4 text-white text-uppercase">Statement <br/>Here</h1>
+                                        <img style={{
+                                            width: "175px"
+                                        }} src="https://res.cloudinary.com/syltiva/image/upload/v1643920209/clipart4409554_oiijlz.png" alt="house logo"/>
+                                    </div>
+                                    <h5 className="sub-title mt-4 text-white pt-2 text-uppercase">Welcome to E-StateMate Services LLC</h5>
+                                    <h1 className="title mt-4 text-white text-uppercase">Web Applications for<br/>the Real Estate World</h1>
                                     <div className="pt-4 mt-1">
                                         <Link to="#" className="btn btn-outline-white mt-2 mr-3">Get Started</Link>
                                         <Link to="#" className="btn btn-primary ml-1 mt-2">Get a Quote</Link>
