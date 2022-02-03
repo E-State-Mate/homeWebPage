@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 
-class LinkSection extends Component {
-    render() {
-        return (
-            <React.Fragment>
+const LinkSection = () => {
+    return (
+        <React.Fragment>
                     <h6 className="text-white text-uppercase f-16">{this.props.title}</h6>
                     <ul className="list-unstyled footer-link mt-3 mb-0">
                     {
@@ -13,9 +12,8 @@ class LinkSection extends Component {
                             )
                     }
                     </ul>
-            </React.Fragment>
-        );
-    }
+        </React.Fragment>   
+    )
 }
 
 export default LinkSection;

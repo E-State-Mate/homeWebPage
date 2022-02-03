@@ -61,6 +61,7 @@ const Section = () => {
             </div>
         </section>
         </React.Fragment>
-    )}
-
+  )
+}
+    
 export default Section;

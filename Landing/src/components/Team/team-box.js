@@ -7,7 +7,7 @@ class TeamBox extends Component {
             <React.Fragment>
                 {
                     this.props.members.map((member, key) =>
-                        <Col key={key} lg={3}>
+                        <Col key={key} lg={4}>
                             <div className="team-box text-center mt-4">
                                 <div className="team-img">
                                     <img src={member.img} className="rounded-circle" alt=""/>
