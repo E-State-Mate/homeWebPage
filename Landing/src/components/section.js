@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
 //Importing Modal
-import ModalSection from '../../components/common/ModalSection';
+import ModalSection from './common/ModalSection';
 
 class Section extends Component {
     constructor() {
@@ -41,10 +41,6 @@ class Section extends Component {
                                             <Link to="#" className="btn btn-primary ml-1 mt-2">Purchase Now</Link>
                                         </div>
                                     </div>
-        
-        
-                                    
-                                    
                                 </Col>
                             </Row>
                         </Container>

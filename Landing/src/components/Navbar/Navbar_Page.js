@@ -9,7 +9,7 @@ import {
     Container,
     Collapse
 } from "reactstrap";
-
+import {Link} from 'react-router-dom'
 import ScrollspyNav from "./scrollSpy";
 
 //Import Images
@@ -34,15 +34,14 @@ const NavbarPage = ({navItems, navClass, imglight}) => {
         <React.Fragment>
             <Navbar expand="lg" fixed="top" className={"navbar-custom sticky sticky-dark " + navClass}>
                 <Container>
-                        <NavbarBrand className="logo text-uppercase" href="/">
-                            {
-                                imglight === true ?
-                                    <h1 style={{fontSize: '1rem', color: '#e4cd05'}}>E-State Mate Services</h1>
-                                :   <h1 style={{fontSize: '1rem', color: 'black'}}>E-State Mate Services</h1>
-                            }
-                        </NavbarBrand>
+                            <NavbarBrand className="logo text-uppercase" >
+                                {
+                                    imglight === true ?
+                                        <Link to='/ '><h1 style={{fontSize: '1rem', color: '#e4cd05'}}>E-State Mate Services</h1></Link>
+                                    :   <Link to='/ '><h1 style={{fontSize: '1rem', color: 'black'}}>E-State Mate Services</h1></Link>
+                                }
+                            </NavbarBrand>                        
                         <NavbarToggler onClick={toggle} ><i className="mdi mdi-menu"></i></NavbarToggler>
-
                     <Collapse id="navbarCollapse" isOpen={isOpenMenu} navbar>
                     <ScrollspyNav
                         scrollTargetIds={targetId}

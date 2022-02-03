@@ -14,7 +14,7 @@ const CallToAction = () => {
                                 <h2 className="text-white text-center">Work with EStateMate today</h2>
                                 <p className=" text-white text-center mt-3">Share with our team your tech needs and let's get started!</p>
                                 <div className="text-center mt-4">
-                                    <Link to="#" className="btn btn-primary mt-2">THIS WILL BE THE CRUD FORM</Link>
+                                    <Link to="inquire" className="btn btn-primary mt-2">Get a Quote Now</Link>
                                 </div>
                             </div>
                         </Col>
