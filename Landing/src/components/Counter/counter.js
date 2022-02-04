@@ -5,20 +5,21 @@ import { Container, Row, Col } from "reactstrap";
 import CounterBox from "./counter-box";
 
 //Import Images
-import img2 from "../../assets/images/features/img-2.jpg";
+import img2 from "../../assets/images/features/newimg.jpg";
 
-class Counter extends Component {
-    state = {
-        counters1 : [
-            { icon : "mdi mdi-heart", title : "Happy Clients", end : 485 },
-            { icon : "mdi mdi-layers", title : "Projects Compleated", end : 536 }
-        ],
-        counters2 : [
-            { icon : "mdi mdi-cloud-download", title : "Files Downloaded", end : 1662 },
-            { icon : "mdi mdi-code-not-equal-variant", title : "Liens Of Code", end : 14652 }
-        ]
-    }
-    render() {
+const state = {
+    counters1 : [
+        { icon : "mdi mdi-heart", title : "Happy Clients", end : 485 },
+        { icon : "mdi mdi-layers", title : "Projects Compleated", end : 536 }
+    ],
+    counters2 : [
+        { icon : "mdi mdi-cloud-download", title : "Files Downloaded", end : 1662 },
+        { icon : "mdi mdi-code-not-equal-variant", title : "Liens Of Code", end : 14652 }
+    ]
+}
+
+const Counter = () => {
+    
         return (
             <React.Fragment>
                 <section className="section bg-light">
@@ -32,11 +33,11 @@ class Counter extends Component {
 
                                         <div className="mt-4">
                                             <Row id="counter">
-                                                <CounterBox counters={this.state.counters1} />
+                                                <CounterBox counters={state.counters1} />
                                             </Row>
 
                                             <Row>
-                                                <CounterBox counters={this.state.counters2} />
+                                                <CounterBox counters={state.counters2} />
                                             </Row>
                                         </div>
 

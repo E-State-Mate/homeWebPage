@@ -3,12 +3,11 @@ import { Col, Media } from "reactstrap";
 
 import CountUp from 'react-countup';
 
-class CounterBox extends Component {
-    render() {
+const CounterBox = ({counters}) => {
         return (
             <React.Fragment>
                 {
-                    this.props.counters.map((counter, key) =>
+                    counters.map((counter, key) =>
                         <Col lg={6} key={key}>
                             <div className="counter-box mt-4">
                                 <Media>
