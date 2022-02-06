@@ -34,14 +34,16 @@ const NavbarPage = ({navItems, navClass, imglight}) => {
         <React.Fragment>
             <Navbar expand="lg" fixed="top" className={"navbar-custom sticky sticky-dark " + navClass}>
                 <Container>
-                            <NavbarBrand className="logo text-uppercase" >
-                                {
-                                    imglight === true ?
-                                        <Link to='/ '><h1 style={{fontSize: '1rem', color: '#e4cd05'}}>E-State Mate Services</h1></Link>
-                                    :   <Link to='/ '><h1 style={{fontSize: '1rem', color: 'black'}}>E-State Mate Services</h1></Link>
-                                }
-                            </NavbarBrand>                        
-                        <NavbarToggler onClick={toggle} ><i className="mdi mdi-menu"></i></NavbarToggler>
+                    <Link to='/ '>
+                        <NavbarBrand className="logo text-uppercase" >
+                            {
+                                imglight === true ?
+                                    <h1 style={{fontSize: '1rem', color: '#e4cd05'}}>E-State Mate Services</h1>
+                                :   <h1 style={{fontSize: '1rem', color: 'black'}}>E-State Mate Services</h1>
+                            }
+                        </NavbarBrand> 
+                    </Link>                       
+                    <NavbarToggler onClick={toggle} ><i className="mdi mdi-menu"></i></NavbarToggler>
                     <Collapse id="navbarCollapse" isOpen={isOpenMenu} navbar>
                     <ScrollspyNav
                         scrollTargetIds={targetId}
@@ -50,16 +52,16 @@ const NavbarPage = ({navItems, navClass, imglight}) => {
                         activeNavClass="active"
                         className="navbar-collapse"
                     >
-                        <Nav navbar className="ml-auto navbar-center" id="mySidenav">
-                            {navItems.map((item, key) => (
-                                <NavItem key={key}>
-                                    <NavLink href={"#" + item.idnm} className={item.navheading === "Home" ? "active" : "" } > {item.navheading}</NavLink>
-                                </NavItem>
-                            ))} 
-                        </Nav>
-                    </ScrollspyNav>
-                    </Collapse>
-                </Container>
+                    <Nav navbar className="ml-auto navbar-center" id="mySidenav">
+                        {navItems.map((item, key) => (
+                            <NavItem key={key}>
+                                <NavLink href={"#" + item.idnm} className={item.navheading === "Home" ? "active" : "" } > {item.navheading}</NavLink>
+                            </NavItem>
+                        ))} 
+                    </Nav>
+                </ScrollspyNav>
+                </Collapse>
+            </Container>
             </Navbar>
         </React.Fragment>
     )

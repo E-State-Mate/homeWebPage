@@ -9,19 +9,6 @@ import { useState } from 'react';
 const Section = () => {
     const [isOpen, setIsOpen]= useState(false)
     
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //         isOpen: false
-    //     }
-    //     this.callModal.bind(this)
-    // }
-
-    // const callModal = () => {
-    //     this.refs.child.openModal(); 
-    // }
-    
-    
     return (
         <React.Fragment>
         <section className="bg-home home-half" id="home">
@@ -44,13 +31,9 @@ const Section = () => {
                                     <h1 className="title mt-4 text-white text-uppercase">Web Applications for<br/>the Real Estate World</h1>
                                     <div className="pt-4 mt-1">
                                         <Link to="#" className="btn btn-outline-white mt-2 mr-3">Get Started</Link>
-                                        <Link to="#" className="btn btn-primary ml-1 mt-2">Get a Quote</Link>
+                                        <Link to="inquire" className="btn btn-primary ml-1 mt-2">Get a Quote</Link>
                                     </div>
                                 </div>
-    
-    
-                                
-                                
                             </Col>
                         </Row>
                     </Container>
