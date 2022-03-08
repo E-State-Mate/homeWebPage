@@ -80,15 +80,15 @@ export const addContact = async ({firstName, lastName, email, phone, organizatio
     });
 
     var requestOptions2 = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
     };
 
     console.log("env", process.env, process.env.REACT_APP_HUBSPOT_APIKEY)
 
-    fetch(`https://api.hubapi.com/crm/v3/objects/contacts?hapikey=${process.env.REACT_APP_HUBSPOT_APIKEY}`, requestOptions2)
+    fetch(`https://api.hubapi.com/cr/v3/objects/contacts?hapikey=${process.env.REACT_APP_HUBSPOT_APIKEY}`, requestOptions2)
     .then(response => response.text())
     .then(result => console.log('result', result))
     .catch(error => console.log('error', error));
