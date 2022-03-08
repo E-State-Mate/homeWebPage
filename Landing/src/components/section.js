@@ -12,7 +12,7 @@ const Section = () => {
     return (
         <React.Fragment>
         <section className="bg-home home-half" id="home">
-            <div className="bg-overlay"></div>
+            {/* <div className="bg-overlay"></div> */}
             <div className="home-center">
                 <div className="home-desc-center">
                     <Container>
@@ -30,7 +30,7 @@ const Section = () => {
                                     <h5 className="sub-title mt-4 text-white pt-2 text-uppercase">Welcome to E-StateMate Services LLC</h5>
                                     <h1 className="title mt-4 text-white text-uppercase">Web Applications for<br/>the Real Estate World</h1>
                                     <div className="pt-4 mt-1">
-                                        <Link to="#" className="btn btn-outline-white mt-2 mr-3">Get Started</Link>
+                                        {/* <Link to="#" className="btn btn-outline-white mt-2 mr-3">Get Started</Link> */}
                                         <Link to="inquire" className="btn btn-primary ml-1 mt-2">Get a Quote</Link>
                                     </div>
                                 </div>

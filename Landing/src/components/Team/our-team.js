@@ -32,7 +32,7 @@ function OurTeam () {
             img : team3, 
             name : "Larry Hovell", 
             post : "Lead UXUI Designer", 
-            desc : "Larry Hovell is a multi-talented UX/UI designer with an extensive background in customer success. Larry manages the web design for technologies in development and all weWhen he is not obsessing over SaaS technology but all technological design, you can find him at the gym or traveling the world." 
+            desc : "Larry Hovell is a multi-talented UX/UI designer with an extensive background in customer success. Larry manages the web design for technologies in development. When he is not obsessing over SaaS technology or technological design, you can find him at the gym or traveling the world." 
         },
         { 
             img : team4, 

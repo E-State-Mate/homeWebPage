@@ -33,12 +33,12 @@ const GetInTouch = () => {
                                     <Media>
                                         <i className="mdi mdi-map-marker text-primary h4"></i>
                                         <Media body className=" ml-4">
-                                            <p className="text-muted">120 SW 8th Street
-                                                <br/>Miami, FL 33130</p>
+                                            <p className="text-muted">7600 Doctor Phillips Boulevard
+                                                <br/>Orlando, FL 32819</p>
                                         </Media>
                                     </Media>
 
-                                    <Media className="mt-4">
+                                    {/* <Media className="mt-4">
                                         <i className="mdi mdi-phone text-primary h4"></i>
                                         <Media body className="ml-4">
                                             <p className="text-muted">Sales: +1 (407) 555-5555
@@ -52,7 +52,7 @@ const GetInTouch = () => {
                                             <p className="text-muted">Weekdays: 9:00-19:00
                                                 <br/>Saturday-Sunday: On request</p>
                                         </Media>
-                                    </Media>
+                                    </Media> */}
 
                                     <Media className="media mt-4">
                                         <i className="mdi mdi-email text-primary h4"></i>

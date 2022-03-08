@@ -8,10 +8,10 @@ import features1 from "../../assets/images/features/img-1.jpg";
 
 const BestSkills = () => {
     const [skills,setSkills] = useState([
-        { title : "Web Design", value : 80 },
-        { title : "Development", value : 60 },
-        { title : "Branding", value : 40 },
-        { title : "Code", value : 75 },
+        { title : "Web Design", value : 99 },
+        { title : "Development", value : 99 },
+        // { title : "Branding", value : 40 },
+        { title : "Code", value : 99 },
     ])
 
     useEffect(()=>{
@@ -29,7 +29,7 @@ const BestSkills = () => {
                     <Col lg="6" className="p-0">
                         <div className="skill-box bg-white p-4 rounded box-shadow">
                             <h5>Best Skills.</h5>
-                            <p className="text-muted">Quisque semper nulla euismod tempor sodales eleifend libero velit Proin pulvinar non rutrum elementum.</p>
+                            {/* <p className="text-muted">Our tech egineers offer a variety of skills to fit your needs</p> */}
                             <div className="skills">
                                 <ProgressBar skills={skills} />
                             </div>

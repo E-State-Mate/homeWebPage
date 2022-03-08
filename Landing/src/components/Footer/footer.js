@@ -53,7 +53,7 @@ const Footer = () => {
                     </div> */}
 
                     <Row className="py-5">
-                        <Col lg={3}>
+                        {/* <Col lg={3}>
                             <div className="mt-2">
                                 <h6 className="text-primary text-uppercase f-16">EStateMateServices</h6>
                                 <p className="text-white-50 mt-3 pt-2 mb-0 ">Follow us on our socials for future product updates, testimonials, and exciting offers!</p>
@@ -71,7 +71,7 @@ const Footer = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </Col>
+                        </Col> */}
 
                         {/* Commented out old links and added in a seperator */}
                         <Col lg={5}>
@@ -90,7 +90,7 @@ const Footer = () => {
                             </div>
                         </Col> */}
 
-                        <Col lg={4}>
+                        {/* <Col lg={4}>
                             <div>
                                 <h6 className="text-white text-uppercase f-16">Latest news</h6>
                                 <div className="mt-3 mb-0">
@@ -112,7 +112,7 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </footer>

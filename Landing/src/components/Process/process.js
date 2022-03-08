@@ -33,7 +33,7 @@ const Process = () => {
     return (
         <React.Fragment>
             <section className="bg-progress section">
-                <div className="bg-overlay"></div>
+                <div className=""></div>
                 <Container>
                 <SectionTitle
                     title="Our Web Development Process"

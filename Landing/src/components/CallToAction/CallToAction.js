@@ -6,7 +6,7 @@ const CallToAction = () => {
     return (
         <React.Fragment>
             <section className="section bg-cta">
-                <div className="bg-overlay"></div>
+                <div className=""></div>
                 <Container>
                     <Row>
                         <Col lg={12}>

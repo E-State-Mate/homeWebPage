@@ -21,7 +21,7 @@ const About = () => {
                     <SectionTitle
                         title="About"
                         // subtitle="WHO WE ARE?"
-                        desc="E-StateMate is a technology firm primarly focused on modernizing the Real Estate industry. Let our full stack engineers create the perfect home page or web application for you."
+                        desc="E-StateMate is a technology firm primarly focused on modernizing the Real Estate industry. Let our web development firm create the perfect home page or web application for you."
                     />
                     <Row className="mt-5 pt-2">
                         <AboutBox data={data} />
