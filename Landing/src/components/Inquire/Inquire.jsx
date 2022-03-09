@@ -55,7 +55,7 @@ function Inquire() {
 
   const ifMobileWebsite = dirtyFields["Mobile website"];
 
-  const ifPriceUnderstandingNo = watch()["Price understanding"] === "No";
+  const ifPriceUnderstandingNo = watch()["Price understanding"] === "No";  
   const ifPriceUnderstandingYes = watch()["Price understanding"] === "Yes";
 
   const ifDateTime =
@@ -82,14 +82,14 @@ function Inquire() {
               <div className="custom-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <h6 className="mb-3">Please provide contact information we can reach you at.</h6>
-                  <select {...register("Title")} className="form-control">
+[                  <select {...register("Title")} className="form-control">
                     <option></option>
                     <option value="Mr">Mr</option>
                     <option value="Mrs">Mrs</option>
                     <option value="Miss">Miss</option>
                     <option value="Dr">Dr</option>
                   </select>
-
+]
                   {formInputsContact.map((text, i) => (
                     <input key={i} type="text" placeholder={text} className="form-control mt-3" {...register(text)} />
                   ))}
@@ -162,12 +162,13 @@ function Inquire() {
                           <SectionTitle />
                           {ifBusinessType && (
                             <FadeIn>
-                              <h6 className="mt-3">I'm looking for a website that is...</h6>
+                              <h6 className="mt-3">How Many Pages Will Your Website Need?</h6>
 
                               <select {...register("Website type")} className="form-control mt-3">
                                 <option></option>
                                 <option value="Singlepage">Singlepage</option>
-                                <option value="Multipage">Multipage</option>
+                                <option value="Multipage (2-10)"> 2-10 pages</option>
+                                <option value="Singlepage (10+)">10+</option>
                               </select>
 
                               <SectionTitle />
