@@ -63,7 +63,7 @@ const GetInTouch = () => {
                                     <Media className="media mt-4">
                                         <i className="mdi mdi-email text-primary h4"></i>
                                         <Media body className="ml-4">
-                                            <p className="text-muted">Email: contact@estatemateservices.com</p>
+                                            <p className="text-muted">contact@estatemateservices.com</p>
                                         </Media>
                                     </Media>
 
