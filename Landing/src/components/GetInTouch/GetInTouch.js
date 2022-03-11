@@ -14,6 +14,12 @@ const GetInTouch = () => {
     const handleSubmit = async (event, errors, values) => {
         console.log(values)
         await addContact(values);
+        document.getElementById('firstName').value = "";
+        document.getElementById('lastName').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('phone').value = "";
+        document.getElementById('organization').value = "";
+        document.getElementById('message').value = "";
     }
 
     return (
