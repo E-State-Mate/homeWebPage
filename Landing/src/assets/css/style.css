@@ -1043,6 +1043,11 @@ p {
 
 .progress-content {
   position: relative;
+  min-height: 250px;
+}
+
+.progress-content > p {
+  margin-top: 1.5rem;
 }
 
 .progress-content:before {

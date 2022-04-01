@@ -43,7 +43,7 @@ export const addContact = async ({ firstName, lastName, email, phone, organizati
         })
     };
 
-    console.log(requestOptions);
+    // console.log(requestOptions);
     /*    const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalID}/${formID}`, requestOptions);
        const res = await response.json()
        console.log("submit_res", res)

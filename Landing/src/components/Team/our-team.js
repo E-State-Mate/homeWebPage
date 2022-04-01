@@ -46,12 +46,12 @@ function OurTeam () {
             post : "Full Stack Developer", 
             desc : "Kalju Nekvasil is a full stack developer who builds and maintains MERN applications for clients. When he is not writing code for E-StateMate he can be found wrestling wildebeests in the Serengeti or hunting for lost treasure in the Amazon. " 
         },
-        { 
-            img : team6, 
-            name : "Paola Garcia", 
-            post : "Full Stack Developer", 
-            desc : "Paola Garcia is a MERN stack developer, consultant, and avid learner. Curiosity and determination has led her to touch a variety of industries and professional roles. Currently she is supporting E-StateMate to become a fully scalable solution for the real estate industry." 
-        },
+        // { 
+        //     img : team6, 
+        //     name : "Paola Garcia", 
+        //     post : "Full Stack Developer", 
+        //     desc : "Paola Garcia is a MERN stack developer, consultant, and avid learner. Curiosity and determination has led her to touch a variety of industries and professional roles. Currently she is supporting E-StateMate to become a fully scalable solution for the real estate industry." 
+        // },
     ])
 
         return (

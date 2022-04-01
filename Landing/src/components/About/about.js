@@ -21,14 +21,14 @@ const About = () => {
                     <SectionTitle
                         title="About"
                         // subtitle="WHO WE ARE?"
-                        desc="E-StateMate is a technology firm primarly focused on modernizing the Real Estate industry. Let our web development firm create the perfect home page or web application for you."
+                        desc="We are on a mission to modernize the Real Estate Industry. Whether your organization needs an internal tech realignment, new website(s), integrating exciting new solutions or continued IT support, we have you. Contact us today to see how we can set you up for success!" 
                     />
                     <Row className="mt-5 pt-2">
                         <AboutBox data={data} />
                     </Row>
                 </Container>
             </section>
-            <BestSkills/>
+            {/* <BestSkills/> */}
         </React.Fragment>
     );
 }
