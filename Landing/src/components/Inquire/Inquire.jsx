@@ -399,7 +399,6 @@ function Inquire() {
                                                       </p>
 
                                                       <input
-                                                        className="mt-3"
                                                         type="submit"
                                                         className="submitBnt btn btn-primary mt-3"
                                                       />
