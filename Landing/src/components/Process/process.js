@@ -9,23 +9,28 @@ const Process = () => {
     const [processes, setProcesses] = useState([
                 { 
                     id : "01", 
-                    title : "Site Mapping", 
-                    desc : "Our firm will walk you through the site architecture process." 
+                    title : "Technology Consulting", 
+                    desc : "Our in-house team orients your business towards scale by eliminating technical debt and unnecessary business expenses on unused technologies." 
                 },
                 { 
                     id : "02", 
-                    title : "Development", 
-                    desc : "Every web project is assigned a lead devoloper, who will manage the building process for you." 
+                    title : "Web Development", 
+                    desc : "Custom website solutions to stand out in your industry using our best-in-class web engineers." 
                 },
                 { 
                     id : "03", 
-                    title : "Feedback", 
-                    desc : "Our firm provides a minimum two consulations for you to discuss any updates to your website." 
+                    title : "Integration Experts", 
+                    desc : "Interested in implementing a pre-built white-labelled solution? We can help you find the right tool for the job and do it for you." 
                 },
+                // { 
+                //     id : "04", 
+                //     title : "Custom App Creation", 
+                //     desc : "Work with our team of designers and engineers to build out your vision and bring it to life!" 
+                // },
                 { 
                     id : "04", 
-                    title : "Deployment", 
-                    desc : "We'll work through any challenges to get your website online and connected to your domain." 
+                    title : "Delivery & Support", 
+                    desc : "After any deployment, we love to work with our clients on a long-term business to drive mutual success <3" 
                 },
             ])
     

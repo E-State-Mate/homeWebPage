@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col } from "reactstrap";
+import '../../assets/css/style.css'
 
 const ProcessBox = (props) => {
     
@@ -7,7 +8,7 @@ const ProcessBox = (props) => {
         <React.Fragment>
             {
                 props.processes.map((process, key) =>
-                        <Col key={key} lg={3} className={ process.id !== "04" ? "progress-border" : ""}>
+                        <Col key={key} lg={3} className="florp">
                             <div className="text-center">
                                 <div className="progress-count text-white mt-4">
                                     <h3>{process.id}</h3>

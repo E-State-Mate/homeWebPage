@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Media, Form, Button } from "reactstrap";
+import { addContact } from '../../lib/contact';
 
 //Import Footer link
 import FooterLinks from "./footer-links";
@@ -29,6 +30,12 @@ const state = {
 
 const Footer = () => {
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const email = event.target[0].value;
+        await addContact({email});
+    }
+
     return(
         <React.Fragment>
             <footer className="bg-footer">
@@ -38,14 +45,14 @@ const Footer = () => {
                         <Row>
                             <Col lg={8}>
                                 <div className="mt-3">
-                                    <h5 className="text-white mt-2 pt-1">Be in the know with the letest and greatest from <span className="text-primary text-uppercase">E-State Mate Services</span></h5>
+                                    <h5 className="text-white mt-2 pt-1">Be in the know with the latest and greatest from <span className="text-primary text-uppercase">E-State Mate Services</span></h5>
                                 </div>
                             </Col>
                             <Col lg={4}>
                                 <div className="footer-subcribe text-right">
-                                    <Form action="#">
+                                    <Form action="#" onSubmit={handleSubmit}>
                                         <input placeholder="Your Email Address" type="text"/>
-                                        <Button type="submit" color="primary"><i className="mdi mdi-bell-ring"></i></Button>
+                                        <Button type="submit" color="primary" ><i className="mdi mdi-bell-ring"></i></Button>
                                     </Form>
                                 </div>
                             </Col>

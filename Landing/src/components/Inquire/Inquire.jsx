@@ -82,14 +82,13 @@ function Inquire() {
               <div className="custom-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <h6 className="mb-3">Please provide contact information we can reach you at.</h6>
-[                  <select {...register("Title")} className="form-control">
+                  <select {...register("Title")} className="form-control">
                     <option></option>
                     <option value="Mr">Mr</option>
                     <option value="Mrs">Mrs</option>
                     <option value="Miss">Miss</option>
                     <option value="Dr">Dr</option>
                   </select>
-]
                   {formInputsContact.map((text, i) => (
                     <input key={i} type="text" placeholder={text} className="form-control mt-3" {...register(text)} />
                   ))}
@@ -400,7 +399,6 @@ function Inquire() {
                                                       </p>
 
                                                       <input
-                                                        className="mt-3"
                                                         type="submit"
                                                         className="submitBnt btn btn-primary mt-3"
                                                       />
