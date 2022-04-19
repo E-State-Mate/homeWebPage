@@ -48,7 +48,6 @@ const NavbarPage = ({navItems, navClass, imglight}) => {
                     <ScrollspyNav
                         scrollTargetIds={targetId}
                         scrollDuration="800"
-                        headerBackground="true"
                         activeNavClass="active"
                         className="navbar-collapse"
                     >
